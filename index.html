@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Weather Forecast</title>
-</head>
-<body>
-  <nav class="navTitle">
-    Weather Dashboard
-  </nav>
-  <main>
-    <section id="body" class="columns">
-      <div class="column is-one-quarter">
-        <h1 class="mb-3">Search for a City:</h1>
-        <input class="input mb-3" type="text" placeholder="Enter City">
-        <button class="button mb-3 is-fullwidth is-link">Button</button>
-        <div class="spacerLine mb-3"></div>
-        <div class="cityList">
-          <button class="button mb-2 is-fullwidth cityButton">placeholder City</button>
-          <button class="button mb-2 is-fullwidth cityButton">placeholder City</button>
-          <button class="button mb-2 is-fullwidth cityButton">placeholder City</button>
-          <button class="button mb-2 is-fullwidth cityButton">placeholder City</button>
-          <button class="button mb-2 is-fullwidth cityButton">placeholder City</button>
-          <button class="button mb-2 is-fullwidth cityButton">placeholder City</button>
-        </div>
-      </div>
-      <div class="column">
-        <div id="current" class="row mb-3">
-          <h1 class="mb-4">City Name (Date) icon</h1>
-          <div class="mb-2">
-            <div class="temp mb-2">placeholder temp</div>
-            <div class="wind mb-2">placeholder temp</div>
-            <div class="Humidity mb-2">placeholder temp</div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <nav class="navTitle">
+      Weather Dashboard
+    </nav>
+    <main>
+      <section id="body" class="columns">
+        <div class="column is-one-quarter row">
+          <h1 class="mb-3">Search for a City:</h1>
+          <input id="city_input" class="input mb-3" type="text" placeholder="Enter City">
+          <button id="search_button" class="button mb-3 is-fullwidth is-link">Search</button>
+          <div class="spacer_line mb-3"></div>
+          <div class="city_list">
           </div>
+          <div class="spacer_line mb-3"></div>
+          <!-- <button id="Tester" class="button mb-2 is-fullwidth">test button</button> -->
+          <button id="Clear" class="button mb-2 mt-2 is-fullwidth">Reset History</button>
         </div>
-        <div id="forecast" class="row">
-          <div>
+        <div class="column">
+          <div id="current" class="row p-3 mb-2">
+            <div class="titleRow">
+              <h1 id="current_title" class="mb-2">City Name (Date)</h1>
+              <img id="current_icon">
+            </div>
+            <div class="mb-2">
+              <div id="temp" class="mb-2">placeholder temp</div>
+              <div id="wind" class="mb-2">placeholder temp</div>
+              <div id="humidity" class="mb-2">placeholder temp</div>
+            </div>
+          </div>
+          <div id="forecast" class="row p-3">
             <h2>5-Day Forecast:</h1>
-          </div>
-          <div class="columns m-3">
-            <div class="column m-1">placeholder</div>
-            <div class="column m-1">placeholder</div>
-            <div class="column m-1">placeholder</div>
-            <div class="column m-1">placeholder</div>
-            <div class="column m-1">placeholder</div>
+            <div id="forecast_sections" class="columns m-3"></div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
+      </section>
+    </main>
+  </body>
+  
+
+  <script src="./assets/js/script.js"></script>
 </html>

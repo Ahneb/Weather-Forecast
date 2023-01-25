@@ -1,8 +1,7 @@
 :root {
-  --lightText: rgb(226, 226, 226);
-  --mainBack: rgb(73, 73, 73);
-  --boxColor: red;
-
+  --lightText: rgb(255, 255, 255);
+  --mainBack: rgb(29, 29, 29);
+  --mainColor: #485fc7;
 }
 
 html {
@@ -24,7 +23,7 @@ h2 {
 }
 
 .navTitle {
-  background-color: #485fc7;
+  background-color: var(--mainColor);
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
@@ -32,18 +31,39 @@ h2 {
 }
 
 .column {
-  border: solid 2px var(--boxColor);
+  /* border: solid 2px var(--boxColor); */
   color: var(--lightText);
+  padding: 0 0.75rem !important;
 }
 
 .row {
-  border: solid 2px green;
+  border: solid 2px var(--mainColor);
 }
 
-.spacerLine {
-  border-bottom: solid 2px var(--boxColor);
+.spacer_line {
+  border-bottom: solid 2px var(--mainColor);
 }
 
 #current {
-  border: solid 2px var(--boxColor);
+  /* border: solid 2px var(--boxColor); */
+}
+
+#current_icon,
+#forecast7_icon,
+#forecast15_icon,
+#forecast23_icon,
+#forecast31_icon,
+#forecast39_icon {
+  max-height: 40px;
+  max-width: 40px;
+
+}
+
+.titleRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.city_list {
+  /* border: 2px solid blue; */
 }
