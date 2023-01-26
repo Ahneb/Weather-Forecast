@@ -15,9 +15,8 @@ Webpage URL:
 - Event listeners and usage of local storage to keep static info
 ## Demo
 
-Generation of weather data by passing in city name and generation of history buttons:
+Generation of forecast, searching from history, resetting history:
 
-Resetting History:
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
