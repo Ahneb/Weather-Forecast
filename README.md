@@ -16,6 +16,7 @@ Webpage URL:
 ## Demo
 
 Generation of forecast, searching from history, resetting history:
+![Demo gif](https://github.com/Ahneb/Weather-Forecast/blob/main/assets/images/brave_kw0kyUxUMX.gif)
 
 ## License
 
