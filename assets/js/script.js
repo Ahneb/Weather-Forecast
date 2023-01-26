@@ -205,6 +205,7 @@ function CreateHistory(cityName) {
 
 function ClearHistory() {
   localStorage.clear();
+  location.reload();
 }
 
 function HistoryCall() {
