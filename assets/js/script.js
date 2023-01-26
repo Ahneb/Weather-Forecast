@@ -70,8 +70,8 @@ async function getWeather() {
   cityInput.value = '';
 
   //call the apis
-  let weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}&units=${units}`;
-  let forecastURL = `http://api.openweathermap.org/data/2.5/forecast?q=${newCity}&appid=${apiKey}&units=${units}`;
+  let weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}&units=${units}`;
+  let forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${newCity}&appid=${apiKey}&units=${units}`;
   
   //api calls for weather and forecast
   const weatherInfo = await fetch(weatherURL);
@@ -113,7 +113,7 @@ function CreateCurrent(weatherJSON) {
 
   //set information into html
   mainTitle.textContent = `${weatherJSON.name} (${currentDate1.toLocaleDateString("en-US")})`;
-  currentIcon.src = `http://openweathermap.org/img/wn/${weatherJSON.weather[0].icon}@2x.png`;
+  currentIcon.src = `https://openweathermap.org/img/wn/${weatherJSON.weather[0].icon}@2x.png`;
   currentTemp.textContent = `Temp: ${weatherJSON.main.temp} ${String.fromCharCode(176)}C`;
   currentWind.textContent = `Wind: ${weatherJSON.wind.speed} MPH`;
   currentHumidity.textContent = `Humidity: ${weatherJSON.main.humidity}${String.fromCharCode(37)}`;
@@ -151,7 +151,7 @@ function CreateForecast(forecastJSON){
     let newIcon = document.createElement('img');
     newIcon.classList.add('columns', 'm-2');
     newIcon.id = `forecast${i}_icon`;
-    newIcon.src = `http://openweathermap.org/img/wn/${forecastJSON.list[i].weather[0].icon}@2x.png`;
+    newIcon.src = `https://openweathermap.org/img/wn/${forecastJSON.list[i].weather[0].icon}@2x.png`;
 
     //forecast temps
     let newTemp = document.createElement('div');
